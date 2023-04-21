@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.informacion-container {
+    background-image: url('../app/assets/Background.png');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: repeat;
+  }
+  .contactanos-container {
+    background-image: url('../app/assets/Background.png');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: repeat;
+    height: 90vh;
+    width: 100%;
+  }
+.info-titulo{
+font-family: 'Kanit';
+font-style: italic;
+font-weight: 700;
+font-size: 96px;
+line-height: 144px;
+
+color: #3C9B35;
+}
+.my-class{
+  flex: auto;
+}
+.line-clamp-2 {
+  
+  text-justify: inter-word;
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.info-span{
+    
+    color: #800040;
+    
+    }
+    @media (min-width: 1200px) {
+      /* styles that will apply when screen width is 768px or greater */
+      .my-class {
+        flex-direction: row;
+        
+        
+        
+      }
+    }
+    

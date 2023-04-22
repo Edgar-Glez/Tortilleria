@@ -16,7 +16,7 @@
     width: 100%;
   }
 .info-titulo{
-font-family: 'Kanit';
+font-family: 'Kanit', sans-serif;
 font-style: italic;
 font-weight: 700;
 font-size: 96px;

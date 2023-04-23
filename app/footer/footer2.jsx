@@ -2,16 +2,14 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="bg-[#3C9B35] text-white w-full text-lg p-4 absolute bottom-0">
-      <div className="container mx-auto ">
+    <footer className="bg-[#3C9B35] text-white w-full text-lg p-4 bottom-0 left-0">
+      <div className="container mx-auto mb-4">
         <div className="grid grid-cols-3 gap-4">
           <div>Buscanos en Facebook</div>
-          <div>
-            <a>Encuentranos en</a>
-          </div>
+          <div><a>Encuentranos en</a></div>
           <div>Whatsapp Para Pedidos</div>
-          <div className="content-center">
-            <a href="https://www.facebook.com/profile.php?id=100090151098895">
+          <div className='content-center'>
+            <a href='https://www.facebook.com/profile.php?id=100090151098895'>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -29,5 +27,6 @@ const Footer = () => {
     </footer>
   );
 };
+
 
 export default Footer;

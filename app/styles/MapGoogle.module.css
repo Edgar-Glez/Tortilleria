@@ -1,0 +1,14 @@
+@media (max-width: 768px) {
+    .google-map {
+      display: block;
+      margin-left: 5;
+      margin-top: 10;
+    }
+  }
+  @media (min-width: 768px) {
+    .google-map{
+      display: block;
+      margin-top: 10;
+    }
+  }
+  

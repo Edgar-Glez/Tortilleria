@@ -11,6 +11,10 @@ const rutas = [
     imagen: true
   },
   {
+    ruta: '/productos',
+    label: 'Productos'
+  },
+  {
     ruta: '/nuestra-historia',
     label: 'Nuestra Historia'
   },

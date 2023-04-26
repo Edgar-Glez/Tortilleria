@@ -1,0 +1,27 @@
+.circle div.fill {
+    border-radius: 50%;
+    border: 5px solid #db2e2e;
+    position: absolute;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    transition: background-color .5s ease-in-out;
+    -webkit-transition: background-color .5s ease-in-out;
+}
+
+.circle div.fill.gold {
+    border-color: #ffaa17;
+}
+
+
+.circle div.fill:hover p { 
+    animation: slide-l .4s ease-in-out forwards;
+    -webkit-animation: slide-l .4s ease-in-out forwards;
+}
+
+.circle div.fill.red:hover {
+    background-color: rgba(214, 103, 103, 0.8);
+}
+
+.circle div.fill.gold:hover {
+    background-color: rgba(221, 180, 103, 0.8);
+}

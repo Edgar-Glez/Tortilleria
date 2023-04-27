@@ -1,14 +1,13 @@
 @media (max-width: 768px) {
-    .schedule-section {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+  .schedule-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  @media (min-width: 768px) {
-    .schedule-section {
-      display: flex;
-      align-items: center;
-    }
+}
+@media (min-width: 768px) {
+  .schedule-section {
+    display: flex;
+    align-items: center;
   }
-  
+}

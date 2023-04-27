@@ -1,31 +1,31 @@
-'use client'
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import Logo from '../assets/logo.jpg';
-import Image from 'next/image';
+"use client";
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
+import Logo from "../assets/logo.jpg";
+import Image from "next/image";
 
 const rutas = [
   {
-    ruta: '/',
-    label: '',
-    imagen: true
+    ruta: "/",
+    label: "",
+    imagen: true,
   },
   {
-    ruta: '/productos',
-    label: 'Productos'
+    ruta: "/productos",
+    label: "Productos",
   },
   {
-    ruta: '/nuestra-historia',
-    label: 'Nuestra Historia'
+    ruta: "/nuestra-historia",
+    label: "Nuestra Historia",
   },
   {
-    ruta: '/contactanos',
-    label: 'Contactanos!'
-  }
+    ruta: "/contactanos",
+    label: "Contactanos!",
+  },
 ];
 
 const Navbar = () => {
-  const [activeRoute, setActiveRoute] = useState('');
+  const [activeRoute, setActiveRoute] = useState("");
 
   useEffect(() => {
     setActiveRoute(window.location.pathname);
@@ -35,7 +35,7 @@ const Navbar = () => {
     // cambia el color de la ruta anterior a negro
     const activeLink = document.querySelector(`.navbar-link.active`);
     if (activeLink) {
-      activeLink.style.color = '#000';
+      activeLink.style.color = "#000";
     }
     setActiveRoute(ruta);
   };
@@ -47,20 +47,37 @@ const Navbar = () => {
           <li key={ruta} className="mr-4">
             {imagen ? (
               <Link href={ruta} passHref legacyBehavior>
-                <a className="logo-link" onClick={() => {handleRouteChange('/'); document.querySelectorAll('.navbar-link').forEach(link => link.style.color = '#000')}}>
-                  <Image id="navbar-logo" className="pl-2 pb-2 sticky" src={Logo} alt="Logo" width={50} height={50} />
+                <a
+                  className="logo-link"
+                  onClick={() => {
+                    handleRouteChange("/");
+                    document
+                      .querySelectorAll(".navbar-link")
+                      .forEach((link) => (link.style.color = "#000"));
+                  }}
+                >
+                  <Image
+                    id="navbar-logo"
+                    className="pl-2 pb-2 sticky"
+                    src={Logo}
+                    alt="Logo"
+                    width={50}
+                    height={50}
+                  />
                 </a>
               </Link>
             ) : (
               <Link href={ruta} passHref legacyBehavior>
                 <a
-                  className={`text-2xl align-bottom sticky navbar-link ${ruta === activeRoute ? 'active' : ''}`}
+                  className={`text-2xl align-bottom sticky navbar-link ${
+                    ruta === activeRoute ? "active" : ""
+                  }`}
                   onMouseOver={(e) => {
-                    e.target.style.color = '#FFF';
+                    e.target.style.color = "#FFF";
                   }}
                   onMouseOut={(e) => {
                     if (ruta !== activeRoute) {
-                      e.target.style.color = '#000';
+                      e.target.style.color = "#000";
                     }
                   }}
                   onClick={() => handleRouteChange(ruta)}

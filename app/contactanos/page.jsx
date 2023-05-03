@@ -42,7 +42,6 @@ const Contactanos = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-
   return (
     <>
       {hydrated && (
@@ -134,7 +133,7 @@ const Contactanos = () => {
               </div>
             </div>
             <div
-              className={`${styles["google-map"]} my-4 mr-32 flex flex-col gap-4`}
+              className={`${styles["google-map"]} my-4 mr-36 lg:ml-36 flex flex-col gap-4`}
               style={{ maxWidth: "80%" }}
             >
               <iframe

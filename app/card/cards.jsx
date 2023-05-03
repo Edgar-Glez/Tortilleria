@@ -36,7 +36,7 @@ const Cards = () => {
     return {};
   };
 
-  const cardClass = isSmallScreen ? "pl-[10%]" : "pl-[20%]";
+  const cardClass = isSmallScreen ? "pl-[10%]" : "pl-[24%]";
 
   return (
     <CCarousel controls transition="crossfade" indicators>
@@ -44,9 +44,8 @@ const Cards = () => {
         <div
           className={`px-[10%] pb-25 pt-21 flex md:flex-row gap-4 ${cardClass}`}
         >
-          <Card 
+          <Card
             style={{
-              
               backgroundImage: `url(${Local.src})`,
               backgroundSize: "cover",
               backgroundPosition: "center",

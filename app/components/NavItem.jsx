@@ -3,7 +3,7 @@ import React from 'react'
  
  const NavItem = ({href, text, active}) => {
    return (
-     <Link href={href} className={`nav___link ${active ? "active": ""}`}>
+     <Link href={href} className={`nav__link ${active ? "active": ""}`}>
     
         {text}
      

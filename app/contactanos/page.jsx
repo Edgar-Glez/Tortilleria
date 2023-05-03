@@ -27,6 +27,22 @@ const Contactanos = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  const [minHeight, setMinHeight] = useState("130vh");
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 1024) {
+        setMinHeight("160vh");
+      } else {
+        setMinHeight("130vh");
+      }
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+
   return (
     <>
       {hydrated && (
@@ -35,10 +51,18 @@ const Contactanos = () => {
           style={{
             display: "flex",
             flexDirection: "column",
-            minHeight: "100vh",
+            minHeight: minHeight,
           }}
         >
-          <div className="justify-center pt-23 flex sd:flex-row flex-col gap-4 my-class px-[10%]">
+          <div
+            className="justify-center pt-23 flex sd:flex-row flex-col gap-4 my-class px-[10%]"
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              marginTop: "50px",
+            }}
+          >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className={`${stylesss["titulo"]}`}>
                 <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
@@ -70,7 +94,7 @@ const Contactanos = () => {
                     costado de Prim. Anexa a la normal
                   </dd> */}
                   </div>
-                  <div className="mt-8 sm:mt-0 flex items-center">
+                  <div className="mt-8 mb-8 sm:mt-0 flex items-center">
                     <FontAwesomeIcon
                       icon={faPhone}
                       className="mr-3 h-10 w-10"
@@ -96,32 +120,32 @@ const Contactanos = () => {
                     </dt>
                     <dd className="ml-4 text-base text-gray-500">
                       <ul className="list-disc pl-5">
-                        <li>Monday (Labor Day): 6 AM&ndash;3 PM</li>
-                        <li>Tuesday: 6 AM&ndash;3 PM</li>
-                        <li>Wednesday: 6 AM&ndash;3 PM</li>
-                        <li>Thursday: 6 AM&ndash;3 PM</li>
-                        <li>Friday: 6 AM&ndash;3 PM</li>
-                        <li>Saturday: 6 AM&ndash;3 PM</li>
-                        <li>Sunday: 6 AM&ndash;3 PM</li>
+                        <li>Lunes (Dia Laboral): 6 AM&ndash;3 PM</li>
+                        <li>Martes: 6 AM&ndash;3 PM</li>
+                        <li>Miercoles: 6 AM&ndash;3 PM</li>
+                        <li>Jueves: 6 AM&ndash;3 PM</li>
+                        <li>Viernes: 6 AM&ndash;3 PM</li>
+                        <li>Sabado: 6 AM&ndash;3 PM</li>
+                        <li>Domingo: 6 AM&ndash;3 PM</li>
                       </ul>
                     </dd>
                   </div>
                 </dl>
-                <div
-                  className={`${styles["google-map"]} my-4 mx-30 flex-grow`}
-                  style={{ maxWidth: "80%" }}
-                >
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d846.9624000360925!2d-116.60602934930635!3d31.883505980504825!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d88d27f547cdfd%3A0x23b78116615bd733!2sTortiller%C3%ADa%20Valle%20Verde!5e0!3m2!1sen!2smx!4v1682195323450!5m2!1sen!2smx"
-                    width={width > 768 ? 1216 : 400}
-                    height={width > 768 ? 450 : 300}
-                    style={{ border: 0 }}
-                    allowFullScreen=""
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                  ></iframe>
-                </div>
               </div>
+            </div>
+            <div
+              className={`${styles["google-map"]} my-4 mr-32 flex flex-col gap-4`}
+              style={{ maxWidth: "80%" }}
+            >
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d846.9624000360925!2d-116.60602934930635!3d31.883505980504825!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d88d27f547cdfd%3A0x23b78116615bd733!2sTortiller%C3%ADa%20Valle%20Verde!5e0!3m2!1sen!2smx!4v1682195323450!5m2!1sen!2smx"
+                width={width > 768 ? 1216 : 400}
+                height={width > 768 ? 450 : 300}
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
           </div>
           <Footer />

@@ -1,5 +1,6 @@
-import React from "react";
-import Footer from "../footer/footer";
+"use client";
+import React, { useEffect, useState } from "react";
+import Footer from "../footer/footer2";
 import Logo from "../assets/logoCompleto.jpg";
 import Image from "next/image";
 import Head from "next/head";
@@ -7,8 +8,30 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUsers, faShop } from "@fortawesome/free-solid-svg-icons";
 
 const AboutPage = () => {
+  const [minHeight, setMinHeight] = useState("100vh");
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 1024) {
+        setMinHeight("220vh");
+      } else {
+        setMinHeight("100vh");
+      }
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
-    <div className="contactanos-container bg-[#F6EFD5] md:min-w-[1225px]">
+    <div
+      className="contactanos-container bg-[#F6EFD5] md:min-w-[1225px]"
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        minHeight: minHeight,
+      }}
+    >
       <div className="justify-center pt-2 flex sd:flex-row flex-col gap-4 my-class  items-center">
         <Head>
           <link

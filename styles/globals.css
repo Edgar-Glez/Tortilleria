@@ -123,12 +123,15 @@
 }
 
 .productos-container {
-  background-color: #f0f0f0;
+  /* background-color: #f0f0f0; */
+  background-image: url("../app/assets/Background.png");
   background-size: cover;
   background-attachment: fixed;
+  background-position: center;
+  background-repeat: repeat;
   animation: scroll 100s linear infinite;
   overflow-y: auto;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   padding: 20px;
 }
 

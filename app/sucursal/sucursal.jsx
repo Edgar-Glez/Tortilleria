@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 import Sucursal1 from "../assets/sucursal.jpg";
 import Sucursal2 from "../assets/sucursal2.jpg";
 import Sucursal3 from "../assets/sucursal3.jpg";
@@ -6,6 +7,15 @@ import { Card, Text } from "@nextui-org/react";
 import styles from "../styles/Sucursal.module.css";
 
 const Sucursal = () => {
+  const [isWideScreen, setIsWideScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => setIsWideScreen(window.innerWidth >= 1024);
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const Sucursales = [
     {
       src: Sucursal1.src,
@@ -30,16 +40,25 @@ const Sucursal = () => {
   return (
     <div>
       <h4
-        className="pt-5 pb-2 font-bold lg:text-[60px] text-[60px] text-[#3C9B35]"
+        className="pt-5 pb-2 font-bold lg:text-[60px] text-[25px] text-[#3C9B35]"
         style={{
           textShadow: "0 0 10px #fff",
-          marginLeft: "30%",
+          marginLeft: isWideScreen ? "30%" : "auto",
           marginBottom: "24px",
+          textAlign: isWideScreen ? "left" : "center",
         }}
       >
         Nuestras Sucursales son:
       </h4>
-      <div style={{ display: "flex", justifyContent: "space-around" }}>
+
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-around",
+          alignItems: "center",
+          flexWrap: "wrap"
+        }}
+      >
         {Sucursales.map((sucursal) => (
           <div
             key={sucursal.src}

@@ -35,6 +35,7 @@ const Navbar = () => {
             height={60}
             src={Logo}
             alt="Logo Empresa"
+            priority
             />
           
         </Link> 

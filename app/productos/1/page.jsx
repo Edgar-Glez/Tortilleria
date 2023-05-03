@@ -7,7 +7,7 @@ const Uno = () => {
   return (
     <div className="h-screen flex flex-col justify-center items-center bg-[#F6EFD5]">
       <div className="productos-container text-justify flex flex-col items-center flex-1">
-        <h1 className="text-3xl font-bold mb-4">
+        <h1 className="text-3xl font-bold mb-4 mt-[30%] lg:mt-[5%]">
           Dos docenas de Tortilla de maiz
         </h1>
         <div className="mx-auto">
@@ -20,28 +20,28 @@ const Uno = () => {
             className="object-contain mb-4"
           />
         </div>
-        <p className="text-base text-gray-500">
-          Dos docenas de tortilla de maíz es un paquete generoso de uno de los
-          alimentos básicos más queridos de la cocina latinoamericana. Estas
-          tortillas están hechas con harina de maíz de la más alta calidad,
-          mezclada con agua y amasada a mano para lograr una textura perfecta y
-          un sabor auténtico.
-        </p>
-        <p className="text-base text-gray-500">
-          Con las dos docenas de tortilla de maíz, puedes preparar una gran
-          variedad de platillos tradicionales de la cocina latinoamericana, como
-          tacos, enchiladas, quesadillas, tostadas, sopes, chilaquiles y muchas
-          otras opciones deliciosas. Además, estas tortillas son muy fáciles de
-          almacenar, ya que pueden ser congeladas para su uso posterior.
-        </p>
-        <p className="text-base text-gray-500">
-          Las tortillas son luego cocidas a la perfección en un comal caliente,
-          creando una superficie crujiente y dorada en el exterior y una textura
-          suave y tierna en el interior. Este paquete de dos docenas de
-          tortillas es perfecto para cualquier ocasión, ya sea una reunión
-          familiar, una fiesta con amigos o simplemente para disfrutarlas en
-          casa.
-        </p>
+        <div className="lg:px-[1%] lg:ml-[15%] lg:mr-[15%]">
+          <dl className="lg:grid-cols-2 lg:gap-8">
+            <dl className="text-base text-gray-500">
+              Dos docenas de tortilla de maíz es un paquete generoso de uno de
+              los alimentos básicos más queridos de la cocina latinoamericana.
+              Estas tortillas están hechas con harina de maíz de la más alta
+              calidad, mezclada con agua y amasada a mano para lograr una
+              textura perfecta y un sabor auténtico. Con las dos docenas de
+              tortilla de maíz, puedes preparar una gran variedad de platillos
+              tradicionales de la cocina latinoamericana, como tacos,
+              enchiladas, quesadillas, tostadas, sopes, chilaquiles y muchas
+              otras opciones deliciosas. Además, estas tortillas son muy fáciles
+              de almacenar, ya que pueden ser congeladas para su uso posterior.
+              Las tortillas son luego cocidas a la perfección en un comal
+              caliente, creando una superficie crujiente y dorada en el exterior
+              y una textura suave y tierna en el interior. Este paquete de dos
+              docenas de tortillas es perfecto para cualquier ocasión, ya sea
+              una reunión familiar, una fiesta con amigos o simplemente para
+              disfrutarlas en casa.
+            </dl>
+          </dl>
+        </div>
         <div className="fixed bottom-4 left-4">
           <Link href="/productos" legacyBehavior>
             <a className="flex items-center justify-center w-12 h-12 bg-blue-500 text-white rounded-full">

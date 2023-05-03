@@ -21,6 +21,7 @@ const Informacion = () => {
         <Image
           src={MaquinaTortilla}
           alt="Tortillas gif"
+          priority
           className="absolute top-0 left-0 w-full h-[120%] object-cover rounded-3xl"
         />
       </div>

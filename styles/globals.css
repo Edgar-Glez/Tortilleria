@@ -8,6 +8,10 @@
   box-sizing: border-box;
 }
 
+.custom-img{
+  background-image: url('../app/assets/tortilla.jpg');
+}
+
 .informacion-container {
   background-image: url("../app/assets/Background.png");
   background-size: 100%;

@@ -4,20 +4,13 @@ import Tortilla from "../assets/tortilla.jpg";
 import LogoFull from "../assets/logo.png";
 import Informacion from "./parte2";
 import styles from "../styles/Inicio.module.css";
+import Hero from "../components/Hero";
 
 const Inicio = () => {
   return (
     <div className={styles.container}>
       <div className={styles.imageContainer}>
-        <Image
-          src={Tortilla}
-          alt="Imagen tortilla"
-          width={1920}
-          height={1080}
-          priority
-          className="object-cover brightness-50"
-          style={{ objectFit: "cover", intrinsic: "true" }}
-        />
+        <Hero/>
         <div className={styles.bottom}>
           <Informacion />
         </div>

@@ -12,7 +12,7 @@ import Cards from "../card/cards";
 const Informacion = () => {
   return (
     <div className="informacion-container bg-[#F6EFD5] ">
-      <h1 className="pt-9 bold text-center info-titulo text-2xl sm:text-4xl md:text-6xl lg:text-6xl xl:text-7xl leading-tight md:leading-snug lg:leading-normal xl:leading-loose">
+      <h1 className="bold text-center info-titulo text-2xl sm:text-4xl md:text-6xl lg:text-6xl xl:text-7xl leading-tight md:leading-snug lg:leading-normal xl:leading-loose">
         ¡La más alta <span className="info-span">calidad!</span>
       </h1>
       <Cards />

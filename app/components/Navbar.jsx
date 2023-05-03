@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Logo from "../assets/logo.jpg";
 import Image from "next/image";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const rutas = [
   {
@@ -26,6 +28,7 @@ const rutas = [
 
 const Navbar = () => {
   const [activeRoute, setActiveRoute] = useState("");
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     setActiveRoute(window.location.pathname);
@@ -40,9 +43,22 @@ const Navbar = () => {
     setActiveRoute(ruta);
   };
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuOpen && !event.target.closest(".navbar-menu")) {
+        setMenuOpen(false);
+      }
+    };
+    document.addEventListener("click", handleClickOutside);
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [menuOpen]);
+
   return (
     <nav className="z-20 sticky top-0 font-bold bg-[#3C9B35] text-white text-xl pt-4 align-middle text-center min-w-[100%]">
-      <ul className="flex sticky">
+      {/* Lista de rutas */}
+      <ul className="hidden lg:flex">
         {rutas.map(({ ruta, label, imagen }) => (
           <li key={ruta} className="mr-4">
             {imagen ? (
@@ -69,7 +85,7 @@ const Navbar = () => {
             ) : (
               <Link href={ruta} passHref legacyBehavior>
                 <a
-                  className={`text-2xl align-bottom sticky navbar-link ${
+                  className={`text-2xl align-bottom navbar-link ${
                     ruta === activeRoute ? "active" : ""
                   }`}
                   onMouseOver={(e) => {
@@ -89,6 +105,52 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
+
+      {/* Botón de hamburguesa */}
+      <button
+        className="text-white hover:text-gray-200 mr-80 pl-5 focus:outline-none lg:hidden"
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        <FontAwesomeIcon icon={faBars} size="2x" />
+      </button>
+
+      {/* Menú desplegable */}
+      {menuOpen && (
+        <div className="bg-transparent pt-2 pb-3 navbar-menu">
+          <div key="/" className="px-4">
+            <Link href="/" passHref legacyBehavior>
+              <a
+                className={`text-2xl align-bottom navbar-link ${
+                  activeRoute === "/" ? "active" : ""
+                }`}
+                onClick={() => {
+                  handleRouteChange("/");
+                  setMenuOpen(false);
+                }}
+              >
+                Inicio
+              </a>
+            </Link>
+          </div>
+          {rutas.map(({ ruta, label }) => (
+            <div key={ruta} className="py-2 px-4">
+              <Link href={ruta} passHref legacyBehavior>
+                <a
+                  className={`text-2xl align-bottom navbar-link ${
+                    ruta === activeRoute ? "active" : ""
+                  }`}
+                  onClick={() => {
+                    handleRouteChange(ruta);
+                    setMenuOpen(false);
+                  }}
+                >
+                  {label}
+                </a>
+              </Link>
+            </div>
+          ))}
+        </div>
+      )}
       <style jsx>{`
         .navbar-link {
           color: #000;

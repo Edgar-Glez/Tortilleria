@@ -101,7 +101,7 @@ const Productos = () => {
   }, []);
 
   return (
-    <div className="productos-container">
+    <div className="productos-container bg-[#F6EFD5]">
       {showScrollButton ? (
         <button
           className="scroll-button md:hidden block"

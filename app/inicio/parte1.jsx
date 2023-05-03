@@ -1,37 +1,35 @@
 import Image from "next/image";
 import React from "react";
-
-import { object } from "prop-types";
 import Tortilla from "../assets/tortilla.jpg";
-
 import LogoFull from "../assets/logo.png";
 import Informacion from "./parte2";
+import styles from "../styles/Inicio.module.css";
 
 const Inicio = () => {
   return (
-    <div className="flez flex-col flex-1">
-      <div className="w-[100%] z-0 h-[50%] justify-center   bg-center absolute">
+    <div className={styles.container}>
+      <div className={styles.imageContainer}>
         <Image
-          className="w-full h-full object-cover brightness-50"
           src={Tortilla}
           alt="Imagen tortilla"
-          style={{
-            width: "100%",
-            height: "190%",
-            objectFit: "cover",
-            intrinsic: "true",
-          }}
+          width={1920}
+          height={1080}
+          priority
+          className="object-cover brightness-50"
+          style={{ objectFit: "cover", intrinsic: "true" }}
         />
-        <div className="bottom-0 left-0 z-10 relative">
+        <div className={styles.bottom}>
           <Informacion />
         </div>
       </div>
-      <div className="pt-[8%]">
+      <div className={styles.logoContainer}>
         <Image
-          className="z-10 relative"
+          className={styles.logo}
           src={LogoFull}
           alt="Logo Empresa"
-          style={{ width: "45%" }}
+          width={10000}
+          height={10000}
+          priority
         />
       </div>
     </div>

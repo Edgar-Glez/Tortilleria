@@ -6,7 +6,7 @@ import styles from "../../../styles/globals.css";
 const Cero = () => {
   return (
     <div className="h-screen flex flex-col justify-center items-center bg-[#F6EFD5]">
-      <div className="productos-container text-center flex flex-col items-center flex-1">
+      <div className="productos-container text-justify flex flex-col items-center flex-1">
         <h1 className="text-3xl font-bold mb-4">
           Tortilla de maiz a la docena
         </h1>

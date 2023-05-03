@@ -6,7 +6,7 @@ import styles from "../../../styles/globals.css";
 const Septimo = () => {
   return (
     <div className="h-screen flex flex-col justify-center items-center bg-[#F6EFD5]">
-      <div className="productos-container text-center flex flex-col items-center flex-1">
+      <div className="productos-container text-justify flex flex-col items-center flex-1">
         <h1 className="text-3xl font-bold mb-4">
           Tres docenas de Tortilla de maiz
         </h1>

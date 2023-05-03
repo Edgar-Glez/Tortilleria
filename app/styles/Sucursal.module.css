@@ -24,3 +24,22 @@
 .circle div.fill.gold:hover {
   background-color: rgba(221, 180, 103, 0.8);
 }
+
+/* Animations */
+@keyframes slide-l {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@-webkit-keyframes slide-l {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}

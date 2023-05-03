@@ -8,6 +8,19 @@ import styles from "../styles/Sucursal.module.css";
 
 const Sucursal = () => {
   const [isWideScreen, setIsWideScreen] = useState(false);
+  const [selectedCardIndex, setSelectedCardIndex] = useState(-1);
+  const [showPhoneNumber, setShowPhoneNumber] = useState(false);
+
+  const isMobile =
+    typeof window !== "undefined" ? window.innerWidth < 768 : false;
+
+  const handleCardClick = (index) => {
+    if (isMobile) {
+      setShowPhoneNumber(showPhoneNumber === index ? false : index);
+    } else {
+      setSelectedCardIndex(index);
+    }
+  };
 
   useEffect(() => {
     const handleResize = () => setIsWideScreen(window.innerWidth >= 1024);
@@ -22,18 +35,21 @@ const Sucursal = () => {
       nombre: "Nombre Sucursal",
       direccion: "Calle 1, Ensenada B,C",
       color: "red",
+      telefono: "+52(646)561-903",
     },
     {
       src: Sucursal2.src,
       nombre: "Nombre Sucursal",
       direccion: "Calle 2, Ensenada B,C",
       color: "gold",
+      telefono: "+52(646)261-642",
     },
     {
       src: Sucursal3.src,
       nombre: "Nombre Sucursal",
       direccion: "Calle 3, Ensenada B,C",
       color: "red",
+      telefono: "+52(646)320-411",
     },
   ];
 
@@ -56,16 +72,19 @@ const Sucursal = () => {
           display: "flex",
           justifyContent: "space-around",
           alignItems: "center",
-          flexWrap: "wrap"
+          flexWrap: "wrap",
         }}
       >
-        {Sucursales.map((sucursal) => (
+        {Sucursales.map((sucursal, index) => (
           <div
             key={sucursal.src}
             style={{ position: "relative", marginBottom: "24px" }}
+            onClick={() => handleCardClick(index)}
+            onMouseEnter={() => !isMobile && setSelectedCardIndex(index)}
+            onMouseLeave={() => !isMobile && setSelectedCardIndex(-1)}
           >
             <Card
-              isHoverable
+              isHoverable={!isMobile}
               style={{
                 backgroundImage: `url(${sucursal.src})`,
                 backgroundSize: "cover",
@@ -87,7 +106,23 @@ const Sucursal = () => {
                   left: 0,
                   opacity: 0.8,
                 }}
-              ></div>
+              >
+                {selectedCardIndex === index ||
+                (isMobile && showPhoneNumber === index) ? (
+                  <p
+                    style={{
+                      marginTop: "80px",
+                      marginBottom: "12px",
+                      textAlign: "center",
+                      width: "100%",
+                      fontSize: "30px",
+                      fontWeight: "bold",
+                    }}
+                  >
+                    {sucursal.telefono}
+                  </p>
+                ) : null}
+              </div>
             </Card>
             <div
               style={{

@@ -2,6 +2,9 @@
 import Link from 'next/link'
 import React, { useState } from 'react'
 import NavItem from './NavItem'
+import LogoCompleto from '../assets/logoCompleto.jpg'
+import Image from 'next/image';
+import Logo from '../assets/logo.jpg'
 
 const MENU_LIST = [
   {
@@ -27,7 +30,12 @@ const Navbar = () => {
       <nav className='nav'>
         <Link href={"/"}>
           
-            <h1 className='logo' onClick={() => setActiveIdx(0)}>Tortilleria Valle Verde</h1>
+            <Image
+            width={60}
+            height={60}
+            src={Logo}
+            alt="Logo Empresa"
+            />
           
         </Link> 
         <div onClick={()=>setNavActive(!navActive)} className='nav__menu-bar'>

@@ -44,8 +44,9 @@ const Cards = () => {
         <div
           className={`px-[10%] pb-25 pt-21 flex md:flex-row gap-4 ${cardClass}`}
         >
-          <Card
+          <Card 
             style={{
+              
               backgroundImage: `url(${Local.src})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
@@ -61,7 +62,7 @@ const Cards = () => {
                 <h4
                   className="font-bold lg:text[90px] text-[60px] text-[#3C9B35] card-text"
                   style={{
-                    textShadow: "0 0 10px #fff",
+                    textShadow: "0 0 10px #000",
                     ...handleCardTextPosition(true),
                   }}
                 >
@@ -70,7 +71,7 @@ const Cards = () => {
                 <p
                   className="font-normal text-[30px] text-[#d7ff27] card-text"
                   style={{
-                    textShadow: "0 0 10px #fff",
+                    textShadow: "0 0 10px #000",
                     ...handleCardTextPosition(true),
                   }}
                 >
@@ -79,7 +80,7 @@ const Cards = () => {
                 <p
                   className="text-[20px] text-[#d7ff27] card-text"
                   style={{
-                    textShadow: "0 0 10px #fff",
+                    textShadow: "0 0 10px #000",
                     ...handleCardTextPosition(true),
                   }}
                 >

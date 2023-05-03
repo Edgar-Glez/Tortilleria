@@ -1,106 +1,59 @@
 "use client";
-import React, { useState, useEffect } from "react";
-import Link from "next/link";
-import Logo from "../assets/logo.jpg";
-import Image from "next/image";
+import Link from 'next/link'
+import React, { useState } from 'react'
+import NavItem from './NavItem'
 
-const rutas = [
+const MENU_LIST = [
   {
-    ruta: "/",
-    label: "",
-    imagen: true,
-  },
-  {
-    ruta: "/productos",
-    label: "Productos",
-  },
-  {
-    ruta: "/nuestra-historia",
-    label: "Nuestra Historia",
-  },
-  {
-    ruta: "/contactanos",
-    label: "Contactanos!",
-  },
-];
+    text: "Tortilleria Valle Verde",
+    href:"/"
+  },{
+    text: "Productos",
+    href:"/productos"
+  },{
+    text: "Nuestra Historia",
+    href:"/nuestra-historia"
+  },{
+    text: "Contactanos",
+    href:"/contactanos"
+  }
+]
 
 const Navbar = () => {
-  const [activeRoute, setActiveRoute] = useState("");
-
-  useEffect(() => {
-    setActiveRoute(window.location.pathname);
-  }, []);
-
-  const handleRouteChange = (ruta) => {
-    // cambia el color de la ruta anterior a negro
-    const activeLink = document.querySelector(`.navbar-link.active`);
-    if (activeLink) {
-      activeLink.style.color = "#000";
-    }
-    setActiveRoute(ruta);
-  };
-
+  const [navActive, setNavActive] = useState(false);
+  const [activeIdx, setActiveIdx] = useState(0);
   return (
-    <nav className="z-20 sticky top-0 font-bold bg-[#3C9B35] text-white text-xl pt-4 align-middle text-center min-w-[100%]">
-      <ul className="flex sticky">
-        {rutas.map(({ ruta, label, imagen }) => (
-          <li key={ruta} className="mr-4">
-            {imagen ? (
-              <Link href={ruta} passHref legacyBehavior>
-                <a
-                  className="logo-link"
-                  onClick={() => {
-                    handleRouteChange("/");
-                    document
-                      .querySelectorAll(".navbar-link")
-                      .forEach((link) => (link.style.color = "#000"));
-                  }}
-                >
-                  <Image
-                    id="navbar-logo"
-                    className="pl-2 pb-2 sticky"
-                    src={Logo}
-                    alt="Logo"
-                    width={50}
-                    height={50}
-                  />
-                </a>
-              </Link>
-            ) : (
-              <Link href={ruta} passHref legacyBehavior>
-                <a
-                  className={`text-2xl align-bottom sticky navbar-link ${
-                    ruta === activeRoute ? "active" : ""
-                  }`}
-                  onMouseOver={(e) => {
-                    e.target.style.color = "#FFF";
-                  }}
-                  onMouseOut={(e) => {
-                    if (ruta !== activeRoute) {
-                      e.target.style.color = "#000";
-                    }
-                  }}
-                  onClick={() => handleRouteChange(ruta)}
-                >
-                  {label}
-                </a>
-              </Link>
-            )}
-          </li>
-        ))}
-      </ul>
-      <style jsx>{`
-        .navbar-link {
-          color: #000;
-          transition: color 0.2s ease-in-out;
-        }
-        .navbar-link.active {
-          color: #fff;
-          text-shadow: 0 0 2px #fff;
-        }
-      `}</style>
-    </nav>
-  );
-};
+    <header>
+      <nav className='nav'>
+        <Link href={"/"}>
+          
+            <h1 className='logo' onClick={() => setActiveIdx(0)}>Tortilleria Valle Verde</h1>
+          
+        </Link> 
+        <div onClick={()=>setNavActive(!navActive)} className='nav__menu-bar'>
+          <div></div>
+          <div></div>
+          <div></div>
 
-export default Navbar;
+        </div>
+        <div className={`${navActive ? 'active' : ''}  nav__menu-list`}>
+          {MENU_LIST.map((menu, idx) => {
+              return(
+              <div onClick={()=>{
+                setActiveIdx(idx);
+                setNavActive(false)
+              }}
+               key={menu.text}>
+                <NavItem active={activeIdx === idx} {...menu}/>
+              </div>
+              );
+            })}
+        </div>
+
+        </nav>
+    </header>
+
+  )
+}
+
+export default Navbar

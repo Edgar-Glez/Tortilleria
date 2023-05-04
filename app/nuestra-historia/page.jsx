@@ -15,7 +15,7 @@ const AboutPage = () => {
       if (window.innerWidth < 1024) {
         setMinHeight("240vh");
       } else {
-        setMinHeight("100vh");
+        setMinHeight("120vh");
       }
     };
     handleResize();
@@ -39,7 +39,7 @@ const AboutPage = () => {
             rel="stylesheet"
           />
         </Head>
-        <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+        <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-36 lg:px-8">
           <div className="lg:grid lg:grid-cols-2 lg:gap-8">
             <div>
               <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">

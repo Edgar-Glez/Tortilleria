@@ -36,10 +36,10 @@ const Cards = () => {
     return {};
   };
 
-  const cardClass = isSmallScreen ? "pl-[10%]" : "pl-[24%]";
+  const cardClass = isSmallScreen ? "pl-[10%]" : "pl-[20%]";
 
   return (
-    <CCarousel controls transition="crossfade" indicators>
+    <CCarousel transition="crossfade" indicators>
       <CCarouselItem>
         <div
           className={`px-[10%] pb-25 pt-21 flex md:flex-row gap-4 ${cardClass}`}

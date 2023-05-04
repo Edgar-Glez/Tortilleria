@@ -7,7 +7,7 @@ const Cero = () => {
   return (
     <div className="h-screen flex flex-col justify-center items-center bg-[#F6EFD5]">
       <div className="productos-container text-justify flex flex-col items-center flex-1">
-        <h1 className="text-3xl font-bold mb-4 mt-[30%] lg:mt-[5%]">
+        <h1 className="text-3xl font-bold mb-4 mt-[30%] lg:mt-[6%]">
           Tortilla de maiz a la docena
         </h1>
         <div className="mx-auto">

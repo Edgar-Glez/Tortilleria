@@ -113,11 +113,12 @@ const Productos = () => {
             position: "fixed",
             bottom: "20px",
             left: "20px",
+            zIndex: "2",
           }}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
+            className="h-11 w-11"
             viewBox="0 0 20 20"
             fill="currentColor"
           >

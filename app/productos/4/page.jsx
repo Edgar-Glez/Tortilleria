@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Imagen4 from "../image/4.png";
 import Link from "next/link";
-import styles from "../../../styles/globals.css";
+
 
 const Cuarto = () => {
   return (

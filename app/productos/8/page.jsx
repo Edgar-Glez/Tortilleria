@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Imagen8 from "../image/8.png";
 import Link from "next/link";
-import styles from "../../../styles/globals.css";
+
 
 const Octavo = () => {
   return (

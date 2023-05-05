@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import Tortilla from "../assets/tortilla.jpg";
 import LogoFull from "../assets/logo.png";
 import Informacion from "./parte2";
 import styles from "../styles/Inicio.module.css";
@@ -10,7 +9,7 @@ const Inicio = () => {
   return (
     <div className={styles.container}>
       <div className={styles.imageContainer}>
-        <Hero/>
+        <Hero />
         <div className={styles.bottom}>
           <Informacion />
         </div>

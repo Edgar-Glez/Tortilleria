@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Imagen0 from "../image/0.png";
 import Link from "next/link";
-import styles from "../../../styles/globals.css";
+
 
 const Cero = () => {
   return (

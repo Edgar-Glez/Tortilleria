@@ -11,11 +11,8 @@ const Sucursal = () => {
   const [selectedCardIndex, setSelectedCardIndex] = useState(-1);
   const [showPhoneNumber, setShowPhoneNumber] = useState(false);
 
-  const isMobile =
-    typeof window !== "undefined" ? window.innerWidth < 768 : false;
-
   const handleCardClick = (index) => {
-    if (isMobile) {
+    if (typeof window !== "undefined" && window.innerWidth < 768) {
       setShowPhoneNumber(showPhoneNumber === index ? false : index);
     } else {
       setSelectedCardIndex(index);
@@ -56,7 +53,7 @@ const Sucursal = () => {
   return (
     <div>
       <h4
-        className="pt-5 pb-2 font-bold lg:text-[60px] text-[25px] text-[#3C9B35]"
+        className="pt-5 pb-2 font-bold text-center sm:ml-32 lg:pr-[28%] lg:text-[60px] text-[25px] text-[#3C9B35]"
         style={{
           textShadow: "0 0 10px #fff",
           marginLeft: isWideScreen ? "30%" : "auto",
@@ -64,7 +61,7 @@ const Sucursal = () => {
           textAlign: isWideScreen ? "left" : "center",
         }}
       >
-        Nuestras Sucursales son:
+        Puedes encontrar nuestros productos en:
       </h4>
 
       <div
@@ -80,11 +77,17 @@ const Sucursal = () => {
             key={sucursal.src}
             style={{ position: "relative", marginBottom: "24px" }}
             onClick={() => handleCardClick(index)}
-            onMouseEnter={() => !isMobile && setSelectedCardIndex(index)}
-            onMouseLeave={() => !isMobile && setSelectedCardIndex(-1)}
+            onMouseEnter={() =>
+              typeof window !== "undefined" &&
+              window.innerWidth >= 768 &&
+              setSelectedCardIndex(index)
+            }
+            onMouseLeave={() => setSelectedCardIndex(-1)}
           >
             <Card
-              isHoverable={!isMobile}
+              isHoverable={
+                typeof window !== "undefined" && window.innerWidth >= 768
+              }
               style={{
                 backgroundImage: `url(${sucursal.src})`,
                 backgroundSize: "cover",
@@ -107,8 +110,7 @@ const Sucursal = () => {
                   opacity: 0.8,
                 }}
               >
-                {selectedCardIndex === index ||
-                (isMobile && showPhoneNumber === index) ? (
+                {selectedCardIndex === index || showPhoneNumber === index ? (
                   <p
                     style={{
                       marginTop: "80px",

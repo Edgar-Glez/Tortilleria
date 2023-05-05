@@ -1,8 +1,7 @@
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import NavItem from "./NavItem";
-import LogoCompleto from "../assets/logoCompleto.jpg";
 import Image from "next/image";
 import Logo from "../assets/logo.jpg";
 
@@ -28,7 +27,7 @@ const MENU_LIST = [
 const Navbar = () => {
   const [navActive, setNavActive] = useState(false);
   const [activeIdx, setActiveIdx] = useState(0);
-  const [activeRoute, setActiveRoute] = useState("/");
+  const [activeRoute, setActiveRoute] = useState("");
 
   const handleLogoClick = () => {
     setActiveRoute("/");
@@ -41,13 +40,30 @@ const Navbar = () => {
     setNavActive(false);
   };
 
+  useEffect(() => {
+    setActiveRoute(window.location.pathname);
+  }, []);
+
+  const handleClickOutsideNav = (e) => {
+    if (navActive && !e.target.closest(".nav")) {
+      setNavActive(false);
+    }
+  };
+
+  React.useEffect(() => {
+    document.body.addEventListener("click", handleClickOutsideNav);
+    return () => {
+      document.body.removeEventListener("click", handleClickOutsideNav);
+    };
+  }, [navActive]);
+
   return (
     <header>
       <nav className="nav">
         <Link href={"/"}>
           <div onClick={handleLogoClick}>
             <Image
-              width={60}
+              style={{ width: "auto", objectFit: "cover" }}
               height={60}
               src={Logo}
               alt="Logo Empresa"

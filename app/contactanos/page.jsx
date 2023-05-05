@@ -64,7 +64,7 @@ const Contactanos = () => {
           >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className={`${stylesss["titulo"]}`}>
-                <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                <p className="mt-2 text-3xl leading-8 lg:pt-[10%] pt-[20%] font-extrabold tracking-tight text-gray-900 sm:text-4xl">
                   ¡Contáctanos!
                 </p>
                 <p
@@ -133,7 +133,7 @@ const Contactanos = () => {
               </div>
             </div>
             <div
-              className={`${styles["google-map"]} my-4 mr-36 lg:ml-36 flex flex-col gap-4`}
+              className={`${styles["google-map"]} my-4 mr-36 lg:ml-35 flex flex-col gap-4`}
               style={{ maxWidth: "80%" }}
             >
               <iframe

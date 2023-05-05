@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Imagen1 from "../image/1.png";
 import Link from "next/link";
-import styles from "../../../styles/globals.css";
+
 
 const Uno = () => {
   return (

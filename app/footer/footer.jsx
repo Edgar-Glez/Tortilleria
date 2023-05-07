@@ -2,19 +2,15 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#3C9B35] text-white w-full text-lg p-4 absolute bottom-100px">
-      <div className="container mx-auto ">
-        <div className="grid grid-cols-3 gap-4">
-          <div>Buscanos en Facebook</div>
-          <div>
-            <a>Encuentranos en</a>
-          </div>
-          <div>Whatsapp Para Pedidos</div>
-          <div className="content-center">
+    <footer className="bg-[#3C9B35] text-white w-full text-lg p-4 absolute">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="text-center md:text-left mb-1 md:mb-0">
+          Buscanos en Facebook
+          <div className="mt-2 md:mt-0">
             <a href="https://www.facebook.com/profile.php?id=100090151098895">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
+                className="h-5 w-5 inline-block md:block mx-auto mb-2"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -22,8 +18,22 @@ const Footer = () => {
               </svg>
             </a>
           </div>
-          <div>Calle Ámbar #130 Col. Valle Verde.</div>
-          <div>(646) 261 2698</div>
+        </div>
+        <div className="text-center md:text-left mb-1 md:mb-0">
+          <a>Encuentranos en :</a>
+          <div className=" mb-4 md:mb-4">
+            Calle Ámbar #130 Col. Valle Verde.
+          </div>
+          <div>-----------------------------------------------------------</div>
+          <div>
+            <a href="/terminos-y-condiciones">Términos y condiciones</a>
+          </div>
+        </div>
+        <div className="text-center md:text-left mb-1 md:mb-0">
+          <a>Whatsapp Para Pedidos :</a>
+          <dd className="ml-4 text-base text-blue-900 underline">
+            <a href="tel:+16462612698">(646) 261 2698</a>
+          </dd>
         </div>
       </div>
     </footer>

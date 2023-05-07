@@ -31,6 +31,7 @@ const Informacion = () => {
         />
       </div>
       <div> .</div>
+      <div> .</div>
       <Footer className="mt-auto mb-auto" />
       <div> .</div>
     </div>

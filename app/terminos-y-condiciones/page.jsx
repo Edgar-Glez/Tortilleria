@@ -7,7 +7,7 @@ const Terminos = () => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 1024) {
-        setMinHeight("240vh");
+        setMinHeight("350vh");
       } else {
         setMinHeight("180vh");
       }

@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import Footer from "../footer/footer2";
 
 const Terminos = () => {
   const [minHeight, setMinHeight] = useState("100vh");
@@ -18,7 +19,7 @@ const Terminos = () => {
   }, []);
   return (
     <div
-      className="contactanos-container bg-[#F6EFD5] md:min-w-[1225px]"
+      className="contactanos-container bg-[#F6EFD5]"
       style={{
         display: "flex",
         flexDirection: "column",
@@ -122,6 +123,7 @@ const Terminos = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

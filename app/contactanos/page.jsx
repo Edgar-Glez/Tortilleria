@@ -29,12 +29,21 @@ const Contactanos = () => {
 
   const [minHeight, setMinHeight] = useState("130vh");
 
+  const [mapClass, setMapClass] = useState("lg:ml-35 lg:mr-40");
+
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 1024) {
         setMinHeight("170vh");
       } else {
         setMinHeight("130vh");
+      }
+      if (width === 412) {
+        setMapClass("mr-[13%]");
+      } else if (width === 375) {
+        setMapClass("mr-[24%]");
+      } else {
+        setMapClass("mr-[27%] lg:ml-35 lg:mr-40");
       }
     };
     handleResize();
@@ -133,7 +142,7 @@ const Contactanos = () => {
               </div>
             </div>
             <div
-              className={`${styles["google-map"]} my-4 mr-[27%] lg:ml-35 lg:mr-40 flex flex-col gap-4`}
+              className={`${styles["google-map"]} my-4 ${mapClass} flex flex-col gap-4`}
               style={{ maxWidth: "80%" }}
             >
               <iframe
@@ -147,6 +156,7 @@ const Contactanos = () => {
               ></iframe>
             </div>
           </div>
+          <div> .</div>
           <Footer />
         </div>
       )}

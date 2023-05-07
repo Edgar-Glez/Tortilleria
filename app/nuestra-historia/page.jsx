@@ -13,7 +13,7 @@ const AboutPage = () => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 1024) {
-        setMinHeight("240vh");
+        setMinHeight("270vh");
       } else {
         setMinHeight("120vh");
       }

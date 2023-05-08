@@ -180,7 +180,6 @@ const Productos = () => {
                       className={`${styles["text-gray-600"]} ${styles["mt-2"]}`}
                       style={{ textAlign: "center" }}
                     >
-                      {" "}
                       Disponibilidad: {product.stock} en stock
                     </p>
                   </div>

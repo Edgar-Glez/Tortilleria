@@ -2,7 +2,6 @@ import Image from "next/image";
 import Imagen2 from "../image/2.png";
 import Link from "next/link";
 
-
 const Dos = () => {
   return (
     <div className="h-screen flex flex-col justify-center items-center bg-[#F6EFD5]">

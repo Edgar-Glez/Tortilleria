@@ -2,7 +2,6 @@ import Image from "next/image";
 import Imagen5 from "../image/5.png";
 import Link from "next/link";
 
-
 const Cinco = () => {
   return (
     <div className="h-screen flex flex-col justify-center items-center bg-[#F6EFD5]">

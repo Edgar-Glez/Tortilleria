@@ -10,10 +10,16 @@
 
 body {
   background-color: #F6EFD5;
-  background-image: url("../app/assets/Background.png");
-  background-size: 100%;
-  background-position: center;
-  background-repeat: repeat;
+}
+
+@media (min-width: 1200px) {
+  body{
+    background-color: #F6EFD5;
+    background-image: url("../app/assets/Background.png");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: repeat;
+  }
 }
 
 .custom-img{
@@ -57,7 +63,6 @@ body {
   color: #800040;
 }
 @media (min-width: 1200px) {
-  /* styles that will apply when screen width is 768px or greater */
   .my-class {
     flex-direction: row;
   }
@@ -150,7 +155,6 @@ body {
   background-repeat: repeat;
   animation: scroll 100s linear infinite;
   overflow-y: auto;
-  /* border-radius: 10px; */
   padding: 20px;
 }
 
@@ -171,7 +175,6 @@ header{
   padding: 16px;
   justify-content: space-between;
   align-items: center;
-  /* background-color: #ffa31a; */
   background-color: #3C9B35;
 }
 .nav__menu-bar{
@@ -218,7 +221,6 @@ header{
 }
 .nav__link:hover{
   color:#F5DA68;
-  /* font-weight: bold; */
 }
 
 .center{

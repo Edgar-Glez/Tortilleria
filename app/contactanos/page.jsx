@@ -97,10 +97,6 @@ const Contactanos = () => {
                     <dd className="ml-4 text-base text-gray-500">
                       Calle Ámbar #130 Col. Valle Verde.
                     </dd>
-                    {/* <dd className="ml-4 text-base text-gray-500">
-                    Sobre la calle de las segundas, a un
-                    costado de Prim. Anexa a la normal
-                  </dd> */}
                   </div>
                   <div className="mt-8 mb-8 sm:mt-0 flex items-center">
                     <FontAwesomeIcon
@@ -123,7 +119,7 @@ const Contactanos = () => {
                       icon={faCalendar}
                       className="mr-2 h-10 w-10"
                     />
-                    <dt className="text-lg leading-6 font-medium text-gray-900">
+                    <dt className="text-lg leading-6 font-medium text-gray-900 pb-3">
                       Horarios:
                     </dt>
                     <dd className="ml-4 text-base text-gray-500">

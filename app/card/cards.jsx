@@ -10,14 +10,33 @@ import Celorio from "../assets/celorio.jpeg";
 const Cards = () => {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
 
+  const [width, setWidth] = useState(
+    typeof window !== "undefined" ? window.innerWidth : 0
+  );
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const [cardClass, setCardClass] = useState("lg:ml-35 lg:mr-40");
+
   useEffect(() => {
     const handleResize = () => {
       setIsSmallScreen(window.innerWidth < 1024);
+      if (width === 412) {
+        setCardClass("pl-[10%]");
+      } else if (width === 1920) {
+        setCardClass("pl-[24%]");
+      } else {
+        setCardClass("");
+      }
     };
-
     handleResize();
     window.addEventListener("resize", handleResize);
-
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -32,11 +51,8 @@ const Cards = () => {
         top: "40px",
       };
     }
-
     return {};
   };
-
-  const cardClass = isSmallScreen ? "pl-[10%]" : "pl-[20%]";
 
   return (
     <CCarousel transition="crossfade" indicators>

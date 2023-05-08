@@ -111,7 +111,7 @@ const Contactanos = () => {
                       :
                     </dt>
                     <dd className="ml-4 text-base text-blue-600 underline">
-                      <a href="tel:+16462612698">(646) 261 2698</a>
+                      <a href="tel:+526462612698">(646) 261 2698</a>
                     </dd>
                   </div>
                   <div className={`${styless["schedule-section"]}`}>

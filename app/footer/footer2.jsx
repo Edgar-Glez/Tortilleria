@@ -32,7 +32,7 @@ const Footer = () => {
         <div className="text-center md:text-left mb-1 md:mb-0">
           <a>Whatsapp Para Pedidos :</a>
           <dd className="ml-4 text-base text-blue-900 underline">
-            <a href="tel:+16462612698">(646) 261 2698</a>
+            <a href="tel:+526462612698">(646) 261 2698</a>
           </dd>
         </div>
       </div>

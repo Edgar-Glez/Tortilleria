@@ -24,7 +24,7 @@ const Footer = () => {
           <div className=" mb-4 md:mb-4">
             Calle Ámbar #130 Col. Valle Verde.
           </div>
-          <div>-----------------------------------------------------------</div>
+          <div>--------------------------------------------------------</div>
           <div>
             <a href="/terminos-y-condiciones">Términos y condiciones</a>
           </div>

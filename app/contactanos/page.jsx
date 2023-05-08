@@ -44,6 +44,8 @@ const Contactanos = () => {
         setMapClass("mr-[24%]");
       } else if (width === 393) {
         setMapClass("mr-[18%]");
+      } else if (width === 1920) {
+        setMapClass("mr-[3%]");
       } else {
         setMapClass("mr-[27%] lg:ml-35 lg:mr-40");
       }

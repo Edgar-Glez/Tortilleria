@@ -156,8 +156,7 @@ const Contactanos = () => {
               ></iframe>
             </div>
           </div>
-          <div> .</div>
-          <Footer />
+          {/* <Footer /> */}
         </div>
       )}
     </>

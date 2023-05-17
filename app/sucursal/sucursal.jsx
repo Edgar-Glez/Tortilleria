@@ -29,25 +29,27 @@ const Sucursal = () => {
   const Sucursales = [
     {
       src: Sucursal1.src,
-      nombre: "Nombre Sucursal",
-      direccion: "Calle 1, Ensenada B,C",
+      nombre: "Sucursal Valle Verde",
+      direccion: "C. Ambar 130, Valle Verde,",
+      direccion2: "Lomas de Valle Verde, 22839 Ensenada, B.C.",
+
       color: "red",
-      telefono: "+52(646)561-903",
+      telefono: "+52(646)261 2698",
     },
-    {
-      src: Sucursal2.src,
-      nombre: "Nombre Sucursal",
-      direccion: "Calle 2, Ensenada B,C",
-      color: "gold",
-      telefono: "+52(646)261-642",
-    },
-    {
-      src: Sucursal3.src,
-      nombre: "Nombre Sucursal",
-      direccion: "Calle 3, Ensenada B,C",
-      color: "red",
-      telefono: "+52(646)320-411",
-    },
+    // {
+    //   src: Sucursal2.src,
+    //   nombre: "Nombre Sucursal",
+    //   direccion: "Calle 2, Ensenada B,C",
+    //   color: "gold",
+    //   telefono: "+52(646)261-642",
+    // },
+    // {
+    //   src: Sucursal3.src,
+    //   nombre: "Nombre Sucursal",
+    //   direccion: "Calle 3, Ensenada B,C",
+    //   color: "red",
+    //   telefono: "+52(646)320-411",
+    // },
   ];
 
   return (
@@ -142,6 +144,14 @@ const Sucursal = () => {
                 color="#020202aa"
               >
                 {sucursal.direccion}
+              </Text>
+              <Text
+                size={12}
+                weight="bold"
+                transform="uppercase"
+                color="#020202aa"
+              >
+                {sucursal.direccion2}
               </Text>
             </div>
           </div>

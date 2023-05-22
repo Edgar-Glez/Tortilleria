@@ -8,9 +8,9 @@ const Terminos = () => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 1024) {
-        setMinHeight("350vh");
+        setMinHeight("270vh");
       } else {
-        setMinHeight("180vh");
+        setMinHeight("120vh");
       }
     };
     handleResize();
@@ -19,7 +19,7 @@ const Terminos = () => {
   }, []);
   return (
     <div
-      className="contactanos-container bg-[#F6EFD5]"
+      className="terminos-container bg-[#F6EFD5]"
       style={{
         display: "flex",
         flexDirection: "column",
@@ -27,7 +27,7 @@ const Terminos = () => {
       }}
     >
       <div
-        className="justify-center pt-23 flex sd:flex-row flex-col gap-4 my-class px-[10%]"
+        className=" pt-23 flex sd:flex-row flex-col gap-4 my-class px-[10%]"
         style={{
           display: "flex",
           flexDirection: "column",
@@ -35,8 +35,8 @@ const Terminos = () => {
           marginTop: "50px",
         }}
       >
-        <div className="justify-center pt-2 flex sd:flex-row flex-col gap-4 my-class  items-center">
-          <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-36 lg:px-8">
+        <div className=" pt-24 flex sd:flex-row flex-col gap-4 my-class ">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl font-bold mb-4 text-center">
               Términos y Condiciones de Tortillería Valle Verde
             </h2>
@@ -123,7 +123,7 @@ const Terminos = () => {
           </div>
         </div>
       </div>
-      <Footer />
+ 
     </div>
   );
 };

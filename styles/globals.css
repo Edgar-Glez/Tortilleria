@@ -34,7 +34,12 @@ body {
   }
 }
 
-
+.terminos-container{
+  background-image: url("../app/assets/Background.png");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: repeat;
+}
 .custom-img{
   background-image: url('../app/assets/tortilla.jpg');
 }

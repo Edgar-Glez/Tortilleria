@@ -16,16 +16,13 @@ const Inicio = () => {
       </div>
       <div className={styles.logoContainer}>
         <Image
-        loading="eager"
-        placeholder="blur"
+          loading="eager"
+          placeholder="blur"
           className={styles.logo}
           src={LogoFull}
-          // loading="lazy"
           alt="Logo Empresa"
           width={10000}
           height={10000}
-          
-          // priority
         />
       </div>
     </div>

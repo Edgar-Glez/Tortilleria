@@ -1,8 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Sucursal1 from "../assets/sucursal.jpg";
-import Sucursal2 from "../assets/sucursal2.jpg";
-import Sucursal3 from "../assets/sucursal3.jpg";
 import { Card, Text } from "@nextui-org/react";
 import styles from "../styles/Sucursal.module.css";
 
@@ -32,24 +30,9 @@ const Sucursal = () => {
       nombre: "Sucursal Valle Verde",
       direccion: "C. Ambar 130, Valle Verde,",
       direccion2: "Lomas de Valle Verde, 22839 Ensenada, B.C.",
-
       color: "red",
       telefono: "+52(646)261 2698",
-    },
-    // {
-    //   src: Sucursal2.src,
-    //   nombre: "Nombre Sucursal",
-    //   direccion: "Calle 2, Ensenada B,C",
-    //   color: "gold",
-    //   telefono: "+52(646)261-642",
-    // },
-    // {
-    //   src: Sucursal3.src,
-    //   nombre: "Nombre Sucursal",
-    //   direccion: "Calle 3, Ensenada B,C",
-    //   color: "red",
-    //   telefono: "+52(646)320-411",
-    // },
+    }
   ];
 
   return (

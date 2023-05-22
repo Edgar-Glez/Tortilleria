@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Footer from "../footer/footer2";
 
 const Terminos = () => {
   const [minHeight, setMinHeight] = useState("100vh");
@@ -123,7 +122,6 @@ const Terminos = () => {
           </div>
         </div>
       </div>
- 
     </div>
   );
 };

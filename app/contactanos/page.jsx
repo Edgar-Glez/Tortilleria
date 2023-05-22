@@ -7,7 +7,6 @@ import {
   faCalendar,
 } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
-import Footer from "../footer/footer2";
 import styles from "../styles/MapGoogle.module.css";
 import styless from "../styles/Schedule.module.css";
 import stylesss from "../styles/Titulo.module.css";
@@ -156,7 +155,6 @@ const Contactanos = () => {
               ></iframe>
             </div>
           </div>
-          {/* <Footer /> */}
         </div>
       )}
     </>

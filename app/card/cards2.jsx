@@ -6,7 +6,6 @@ import { Card } from "@nextui-org/react";
 import ElPaisa from "../assets/El_paisa.jpg";
 import LaMexico from "../assets/La_mexico.jpg";
 import LosReyes from "../assets/Los_reyes.jpg";
-import Image from "next/image";
 
 const Cards = () => {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
@@ -48,12 +47,6 @@ const Cards = () => {
               maxWidth: "1000px",
             }}
           >
-            {/* <Image
-            src={ElPaisa}
-            alt="Tacos El Paisa"
-            loading="eager"
-            placeholder="blur"
-            /> */}
           </Card>
         </div>
       </CCarouselItem>

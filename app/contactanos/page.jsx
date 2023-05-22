@@ -89,7 +89,7 @@ const Contactanos = () => {
                 </p>
               </div>
               <div className="mt-10">
-                <dl className="sm:grid sm:grid-cols-2 sm:gap-8">
+                <dl className="sm:grid sm:grid-cols-1 sm:gap-8">
                   <div className="flex items-center">
                     <FontAwesomeIcon
                       icon={faMapMarkerAlt}

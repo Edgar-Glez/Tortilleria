@@ -13,6 +13,7 @@ const Cero = () => {
           <Image
             src={Imagen0}
             alt="Imagen del Producto"
+            placeholder="blur"
             priority
             width={500}
             height={64}

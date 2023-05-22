@@ -25,7 +25,7 @@ const AboutPage = () => {
 
   return (
     <div
-      className="contactanos-container bg-[#F6EFD5] md:min-w-[1225px]"
+      className="nuestra-historia-container bg-[#F6EFD5] md:min-w-[1225px]"
       style={{
         display: "flex",
         flexDirection: "column",
@@ -65,6 +65,8 @@ const AboutPage = () => {
                 </p>
                 <div className="justify-center pt-5 flex sd:flex-row flex-col gap-4 my-class  items-center">
                   <Image
+                  placeholder="blur"
+                  loading="eager"
                     src={Logo}
                     alt="Logo Empresa"
                     className="h-[320px] w-[400px] rounded-lg"

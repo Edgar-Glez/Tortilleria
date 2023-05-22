@@ -17,7 +17,7 @@ const Informacion = () => {
       <Cards />
       <Sucursal />
       <h1 className="bold text-center info-titulo text-2xl sm:text-4xl md:text-6xl lg:text-6xl xl:text-7xl leading-tight md:leading-snug lg:leading-normal xl:leading-loose">
-        ¡Le proveemos <span className="info-span">a!</span>
+        Le proveemos a:
       </h1>
       <Cards2 />
       <div> .</div>

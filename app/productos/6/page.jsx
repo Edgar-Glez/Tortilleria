@@ -16,6 +16,7 @@ const Sexto = () => {
             priority
             width={500}
             height={64}
+            placeholder="blur"
             className="object-contain mb-4"
           />
         </div>

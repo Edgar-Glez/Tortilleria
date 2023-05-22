@@ -27,7 +27,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2;
+  z-index: 0;
   position: absolute;
   right: 60%;
   top: 20%;
@@ -38,7 +38,7 @@
   height: auto;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .logoContainer {
     padding: 0;
     justify-content: center;
@@ -48,5 +48,17 @@
 
   .logo {
     max-width: 100%;
+  }
+}
+@media (max-width: 768px) and (orientation: landscape){
+  .logoContainer {
+    padding: 0;
+    justify-content: center;
+    right: 0%;
+    top: 20%;
+  }
+
+  .logo {
+    max-width: 70%;
   }
 }

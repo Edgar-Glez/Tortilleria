@@ -13,6 +13,7 @@ const Dos = () => {
           <Image
             src={Imagen2}
             alt="Imagen del Producto"
+            placeholder="blur"
             priority
             width={500}
             height={64}

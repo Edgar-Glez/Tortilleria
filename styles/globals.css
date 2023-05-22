@@ -22,6 +22,19 @@ body {
   }
 }
 
+@media only screen and (max-width: 768px) and (orientation: landscape){
+  .contactanos-container{
+    background-image: url("../app/assets/Background.png");
+    background-size: 100%;
+    padding-bottom: 160%;
+    background-position: center;
+    background-repeat: repeat;
+    height: 10vh;
+    width: 100%;
+  }
+}
+
+
 .custom-img{
   background-image: url('../app/assets/tortilla.jpg');
 }
@@ -31,6 +44,14 @@ body {
   background-size: 100%;
   background-position: center;
   background-repeat: repeat;
+}
+.nuestra-historia-container {
+  background-image: url("../app/assets/Background.png");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: repeat;
+  height: 10vh;
+  width: 100%;
 }
 .contactanos-container {
   background-image: url("../app/assets/Background.png");

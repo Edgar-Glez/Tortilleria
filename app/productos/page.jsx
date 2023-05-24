@@ -120,7 +120,7 @@ const Productos = () => {
             xmlns="http://www.w3.org/2000/svg"
             className="h-11 w-11"
             viewBox="0 0 20 20"
-            fill="currentColor"
+            fill="#3C9B35"
           >
             <path
               fillRule="evenodd"

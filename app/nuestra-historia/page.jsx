@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Footer from "../footer/footer2";
 import Logo from "../assets/logoCompleto.jpg";
 import Image from "next/image";
 import Head from "next/head";
@@ -65,8 +64,8 @@ const AboutPage = () => {
                 </p>
                 <div className="justify-center pt-5 flex sd:flex-row flex-col gap-4 my-class  items-center">
                   <Image
-                  placeholder="blur"
-                  loading="eager"
+                    placeholder="blur"
+                    loading="eager"
                     src={Logo}
                     alt="Logo Empresa"
                     className="h-[320px] w-[400px] rounded-lg"
@@ -118,7 +117,6 @@ const AboutPage = () => {
           </div>
         </div>
       </div>
-      {/* <Footer /> */}
     </div>
   );
 };

@@ -22,7 +22,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 768px) and (orientation: landscape){
+@media only screen and (max-width: 930px) and (orientation: landscape){
   .contactanos-container{
     background-image: url("../app/assets/Background.png");
     background-size: 100%;
@@ -256,7 +256,7 @@ header{
   align-items: center;
 }
 
-@media screen and (min-width: 812px) {
+@media screen and (min-width: 878px) {
   .nav__menu-bar{
     display: none;
   }

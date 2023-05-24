@@ -30,7 +30,7 @@ const Cards = () => {
       if (width === 412) {
         setCardClass("pl-[10%]");
       } else if (width === 1920) {
-        setCardClass("pl-[24%]");
+        setCardClass("pl-[27%]");
       } else {
         setCardClass("");
       }
@@ -55,7 +55,7 @@ const Cards = () => {
   };
 
   return (
-    <CCarousel transition="crossfade" indicators>
+    <CCarousel transition="crossfade" indicators className="px-[20%]">
       <CCarouselItem>
         <div
           className={`px-[10%] pb-25 pt-21 flex md:flex-row gap-4 ${cardClass}`}

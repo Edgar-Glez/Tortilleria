@@ -21,9 +21,73 @@ body {
     background-repeat: repeat;
   }
 }
+.mapa-contactanos{
+  width: 1000px;
+  height: 500px;
+  padding-left: 10%;
+  /* margin-bottom: 1000px; */
+  /* width={width > 768 ? 1216 : 310}
+                height={width > 768 ? 450 : 200} */
+}
+@media only screen and (max-width: 1300px) and (min-width: 800px) {
+  .mapa-contactanos{
+    width: 700px;
+    height: 300px;
+    padding-left: 10%;
+   
+  }
+}
+@media only screen and (max-width: 799px)and (min-width: 600px){
+  .mapa-contactanos{
+    width: 450px;
+    height: 200px;
+    padding-left: 10%;
+  }
+}
+@media only screen and (max-width: 599px) {
+  .mapa-contactanos{
+    width: 270px;
+    height: 170px;
+    padding-left: 10%;
+  }
+}
 
-@media only screen and (max-width: 768px) and (orientation: landscape) {
-  .contactanos-container {
+@media only screen and (max-width: 380px) {
+  .nuestra-historia-container {
+    background-image: url("../app/assets/Background.png");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: repeat;
+    margin-bottom: 50vh;
+    height: 10vh;
+    width: 100%;
+}
+}
+
+@media only screen and (orientation: landscape){
+  .nuestra-historia-container {
+    background-image: url("../app/assets/Background.png");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: repeat;
+    margin-bottom: 50vh;
+    height: 10vh;
+    width: 100%;
+}
+}
+@media only screen and (orientation: landscape) and (max-height: 390px){
+  .nuestra-historia-container {
+    background-image: url("../app/assets/Background.png");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: repeat;
+    margin-bottom: 100vh;
+    height: 10vh;
+    width: 100%;
+}
+}
+@media only screen and (max-width: 930px) and (orientation: landscape){
+  .contactanos-container{
     background-image: url("../app/assets/Background.png");
     background-size: 100%;
     padding-bottom: 160%;
@@ -185,7 +249,7 @@ body {
   padding: 20px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 950px) {
   .productos-container {
     padding: 10px;
   }
@@ -255,8 +319,9 @@ header {
   align-items: center;
 }
 
-@media screen and (min-width: 812px) {
-  .nav__menu-bar {
+
+@media screen and (min-width: 950px) {
+  .nav__menu-bar{
     display: none;
   }
   .nav__menu-list {

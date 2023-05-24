@@ -28,7 +28,7 @@ const Cards = () => {
     const handleResize = () => {
       setIsSmallScreen(window.innerWidth < 1024);
       if (width === 412) {
-        setCardClass("pl-[10%]");
+        setCardClass("pl-[2%]");
       } else if (width === 1920) {
         setCardClass("pl-[27%]");
       } else {
@@ -58,7 +58,7 @@ const Cards = () => {
     <CCarousel
       transition="crossfade"
       indicators
-      className="lg:px-[20%] px-[10%] pl-[2%]"
+      className="lg:px-[20%] px-[12%]"
     >
       <CCarouselItem>
         <div className={`pb-25 pt-21 flex md:flex-row gap-4 ${cardClass}`}>

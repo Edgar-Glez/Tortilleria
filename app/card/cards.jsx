@@ -55,11 +55,13 @@ const Cards = () => {
   };
 
   return (
-    <CCarousel transition="crossfade" indicators className="px-[20%]">
+    <CCarousel
+      transition="crossfade"
+      indicators
+      className="lg:px-[20%] px-[10%] pl-[2%]"
+    >
       <CCarouselItem>
-        <div
-          className={`pb-25 pt-21 flex md:flex-row gap-4 ${cardClass}`}
-        >
+        <div className={`pb-25 pt-21 flex md:flex-row gap-4 ${cardClass}`}>
           <Card
             style={{
               backgroundImage: `url(${Local.src})`,
@@ -108,9 +110,7 @@ const Cards = () => {
         </div>
       </CCarouselItem>
       <CCarouselItem>
-        <div
-          className={`pb-25 pt-21 flex md:flex-row gap-4 ${cardClass}`}
-        >
+        <div className={`pb-25 pt-21 flex md:flex-row gap-4 ${cardClass}`}>
           <Card
             style={{
               backgroundImage: `url(${CornImage.src})`,
@@ -149,9 +149,7 @@ const Cards = () => {
         </div>
       </CCarouselItem>
       <CCarouselItem>
-        <div
-          className={`pb-25 pt-21 flex md:flex-row gap-4 ${cardClass}`}
-        >
+        <div className={`pb-25 pt-21 flex md:flex-row gap-4 ${cardClass}`}>
           <Card
             style={{
               backgroundImage: `url(${Celorio.src})`,

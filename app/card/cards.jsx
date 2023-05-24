@@ -58,7 +58,7 @@ const Cards = () => {
     <CCarousel transition="crossfade" indicators className="px-[20%]">
       <CCarouselItem>
         <div
-          className={`px-[10%] pb-25 pt-21 flex md:flex-row gap-4 ${cardClass}`}
+          className={`pb-25 pt-21 flex md:flex-row gap-4 ${cardClass}`}
         >
           <Card
             style={{
@@ -109,7 +109,7 @@ const Cards = () => {
       </CCarouselItem>
       <CCarouselItem>
         <div
-          className={`px-[10%] pb-25 pt-21 flex md:flex-row gap-4 ${cardClass}`}
+          className={`pb-25 pt-21 flex md:flex-row gap-4 ${cardClass}`}
         >
           <Card
             style={{
@@ -150,7 +150,7 @@ const Cards = () => {
       </CCarouselItem>
       <CCarouselItem>
         <div
-          className={`px-[10%] pb-25 pt-21 flex md:flex-row gap-4 ${cardClass}`}
+          className={`pb-25 pt-21 flex md:flex-row gap-4 ${cardClass}`}
         >
           <Card
             style={{

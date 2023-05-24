@@ -13,7 +13,7 @@ const AboutPage = () => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 1024) {
-        setMinHeight("270vh");
+        setMinHeight("220vh");
       } else {
         setMinHeight("120vh");
       }
@@ -25,7 +25,7 @@ const AboutPage = () => {
 
   return (
     <div
-      className="nuestra-historia-container bg-[#F6EFD5] md:min-w-[1225px]"
+      className="nuestra-historia-container bg-[#F6EFD5] "
       style={{
         display: "flex",
         flexDirection: "column",
@@ -33,7 +33,7 @@ const AboutPage = () => {
       }}
     >
       <div
-        className="justify-center pt-23 flex sd:flex-row flex-col gap-4 my-class px-[10%]"
+        className=" pt-10 flex sd:flex-row flex-col gap-4 my-class px-[10%]"
         style={{
           display: "flex",
           flexDirection: "column",
@@ -41,14 +41,14 @@ const AboutPage = () => {
           marginTop: "50px",
         }}
       >
-        <div className="justify-center pt-2 flex sd:flex-row flex-col gap-4 my-class  items-center">
+        <div className="justify-center pt-2 flex sd:flex-row flex-col gap-4  ">
           <Head>
             <link
               href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400&display=swap"
               rel="stylesheet"
             />
           </Head>
-          <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-36 lg:px-8">
+          <div className="max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:py-10 lg:px-8">
             <div className="lg:grid lg:grid-cols-2 lg:gap-8">
               <div>
                 <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">

@@ -59,7 +59,7 @@ const Contactanos = () => {
     <>
       {hydrated && (
         <div
-          className="contactanos-container bg-[#F6EFD5] md:min-w-[1225px]"
+          className="contactanos-container bg-[#F6EFD5] "
           style={{
             display: "flex",
             flexDirection: "column",
@@ -67,7 +67,7 @@ const Contactanos = () => {
           }}
         >
           <div
-            className="justify-center pt-23 flex sd:flex-row flex-col gap-4 my-class px-[10%]"
+            className="justify-center md:justify-evenly pt-23 flex sd:flex-row md:flex-row flex-col gap-4 px-[10%]"
             style={{
               display: "flex",
               flexDirection: "column",
@@ -147,16 +147,15 @@ const Contactanos = () => {
             >
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d846.9624000360925!2d-116.60602934930635!3d31.883505980504825!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d88d27f547cdfd%3A0x23b78116615bd733!2sTortiller%C3%ADa%20Valle%20Verde!5e0!3m2!1sen!2smx!4v1682195323450!5m2!1sen!2smx"
-                width={width > 768 ? 1216 : 310}
-                height={width > 768 ? 450 : 200}
                 style={{ border: 0 }}
-                allowFullScreen=""
+               
+                className="mapa-contactanos"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
             </div>
           </div>
-          {/* <Footer /> */}
+          
         </div>
       )}
     </>

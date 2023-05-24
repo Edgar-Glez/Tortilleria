@@ -32,7 +32,7 @@ const Sucursal = () => {
       direccion2: "Lomas de Valle Verde, 22839 Ensenada, B.C.",
       color: "red",
       telefono: "+52(646)261 2698",
-    }
+    },
   ];
 
   return (

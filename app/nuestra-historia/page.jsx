@@ -14,7 +14,7 @@ const AboutPage = () => {
       if (window.innerWidth < 1024) {
         setMinHeight("220vh");
       } else {
-        setMinHeight("120vh");
+        setMinHeight("50vh");
       }
     };
     handleResize();

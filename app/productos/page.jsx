@@ -101,94 +101,96 @@ const Productos = () => {
   }, []);
 
   return (
-    <div className="productos-container bg-[#F6EFD5]">
-      {showScrollButton ? (
-        <button
-          className="scroll-button md:hidden block"
-          onClick={() => {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-          }}
-          style={{
-            display: "block",
-            position: "fixed",
-            bottom: "20px",
-            left: "20px",
-            zIndex: "2",
-          }}
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-11 w-11"
-            viewBox="0 0 20 20"
-            fill="#3C9B35"
+    <div className="productos-container bg-[#F6EFD5] min-h-screen flex flex-col">
+      <div className="flex-grow">
+        {showScrollButton ? (
+          <button
+            className="scroll-button md:hidden block"
+            onClick={() => {
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
+            style={{
+              display: "block",
+              position: "fixed",
+              bottom: "20px",
+              left: "20px",
+              zIndex: "2",
+            }}
           >
-            <path
-              fillRule="evenodd"
-              d="M13.707 9.707a1 1 0 01-1.414 1.414L10 8.414l-2.293 2.293a1 1 0 01-1.414-1.414l3-3a1 1 0 011.414 0l3 3z"
-              clipRule="evenodd"
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-11 w-11"
+              viewBox="0 0 20 20"
+              fill="#3C9B35"
+            >
+              <path
+                fillRule="evenodd"
+                d="M13.707 9.707a1 1 0 01-1.414 1.414L10 8.414l-2.293 2.293a1 1 0 01-1.414-1.414l3-3a1 1 0 011.414 0l3 3z"
+                clipRule="evenodd"
+              />
+            </svg>
+          </button>
+        ) : null}
+        <div
+          className="search-container"
+          style={{ display: "flex", justifyContent: "center" }}
+        >
+          <div className="amazon-search" style={{ width: "80%" }}>
+            <input
+              type="text"
+              placeholder="Buscar productos"
+              value={busqueda}
+              onChange={handleBusqueda}
+              style={{ width: "100%" }}
             />
-          </svg>
-        </button>
-      ) : null}
-      <div
-        className="search-container"
-        style={{ display: "flex", justifyContent: "center" }}
-      >
-        <div className="amazon-search" style={{ width: "80%" }}>
-          <input
-            type="text"
-            placeholder="Buscar productos"
-            value={busqueda}
-            onChange={handleBusqueda}
-            style={{ width: "100%" }}
-          />
-        </div>
-      </div>
-      <ul className="grid grid-cols-1 md:grid-cols-4 gap-4">
-        {productosFiltrados.map((product) => (
-          <div className="product-container" key={product.id}>
-            <Link href={`/productos/${product.id}`} legacyBehavior>
-              <a>
-                <div className="group">
-                  <div
-                    className={`${styles["relative"]} ${styles["overflow-hidden"]} ${styles["rounded-lg"]} ${styles["shadow-lg"]} group-hover:shadow-xl transition-shadow duration-500`}
-                    style={{ width: "100%", height: "100%" }}
-                  >
-                    <Image
-                      src={product.imagen}
-                      alt={product.nombre}
-                      layout="responsive"
-                      priority
-                      width={300}
-                      height={300}
-                    />
-                  </div>
-                  <div className={`${styles["p-4"]}`}>
-                    <h2
-                      className={`${styles["font-semibold"]} ${styles["text-gray-800"]} ${styles["text-lg"]}`}
-                      style={{ textAlign: "center" }}
-                    >
-                      {product.nombre}
-                    </h2>
-                    <p
-                      className={`${styles["text-gray-600"]} ${styles["mt-2"]}`}
-                      style={{ textAlign: "center" }}
-                    >
-                      Precio: ${product.precio}
-                    </p>
-                    <p
-                      className={`${styles["text-gray-600"]} ${styles["mt-2"]}`}
-                      style={{ textAlign: "center" }}
-                    >
-                      Disponibilidad: {product.stock} en stock
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </Link>
           </div>
-        ))}
-      </ul>
+        </div>
+        <ul className="grid grid-cols-1 md:grid-cols-4 gap-4">
+          {productosFiltrados.map((product) => (
+            <div className="product-container" key={product.id}>
+              <Link href={`/productos/${product.id}`} legacyBehavior>
+                <a>
+                  <div className="group">
+                    <div
+                      className={`${styles["relative"]} ${styles["overflow-hidden"]} ${styles["rounded-lg"]} ${styles["shadow-lg"]} group-hover:shadow-xl transition-shadow duration-500`}
+                      style={{ width: "100%", height: "100%" }}
+                    >
+                      <Image
+                        src={product.imagen}
+                        alt={product.nombre}
+                        layout="responsive"
+                        priority
+                        width={300}
+                        height={300}
+                      />
+                    </div>
+                    <div className={`${styles["p-4"]}`}>
+                      <h2
+                        className={`${styles["font-semibold"]} ${styles["text-gray-800"]} ${styles["text-lg"]}`}
+                        style={{ textAlign: "center" }}
+                      >
+                        {product.nombre}
+                      </h2>
+                      <p
+                        className={`${styles["text-gray-600"]} ${styles["mt-2"]}`}
+                        style={{ textAlign: "center" }}
+                      >
+                        Precio: ${product.precio}
+                      </p>
+                      <p
+                        className={`${styles["text-gray-600"]} ${styles["mt-2"]}`}
+                        style={{ textAlign: "center" }}
+                      >
+                        Disponibilidad: {product.stock} en stock
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </Link>
+            </div>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };

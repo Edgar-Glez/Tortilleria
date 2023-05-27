@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/legacy/image";
 import styles from "../../styles/globals.css";
+import background from "../assets/Background.png";
 
 const productos = [
   {
@@ -101,7 +102,7 @@ const Productos = () => {
   }, []);
 
   return (
-    <div className="productos-container bg-[#F6EFD5] min-h-screen flex flex-col">
+    <div className=" bg-cover bg-fixed bg-center bg-repeat animate-[scroll_100s_linear_infinite] overflow-y-auto p-5 bg-[#F6EFD5] min-h-screen flex flex-col">
       <div className="flex-grow">
         {showScrollButton ? (
           <button
@@ -132,11 +133,12 @@ const Productos = () => {
           </button>
         ) : null}
         <div
-          className="search-container"
+          className="display-flex align-center justify-space-between mb-[20px]"
           style={{ display: "flex", justifyContent: "center" }}
         >
-          <div className="amazon-search" style={{ width: "80%" }}>
+          <div className="bg-[#ffffff] border-r-[5px] border-[1px] border-solid border-[#cccccc] w-[80%] p-[10px] mt-[100px] " style={{ width: "80%" }}>
             <input
+              className="flex-1 border-none outline-none text-base ml-[10px] bg-transparent"
               type="text"
               placeholder="Buscar productos"
               value={busqueda}

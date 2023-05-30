@@ -45,25 +45,45 @@ const rutas = [
 
 export default function NavbarComponent() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [rutaSeleccionada, setRutaSeleccionada] = useState(rutas[0]);
 
   function handleMenu() {
     setMenuOpen(!menuOpen);
   }
 
-  /**
-   * Color base: #e66767
-   */
+  function handleLogoClick() {
+    setRutaSeleccionada(rutas[0]);
+  }
+
+  function handleRutaClick(ruta) {
+    setRutaSeleccionada(ruta);
+  }
+
   return (
     <nav className="fixed w-full h-28 shadow-md bg-[#3C9B35] z-50">
       <div className="flex justify-between items-center h-full w-full px-10 2xl:px-16 text-white ">
         <Link href={"/"}>
-          <Image src={Logo} width={75} height={75} alt="logo" priority />
+          <Image
+            src={Logo}
+            width={75}
+            height={75}
+            alt="logo"
+            priority
+            onClick={handleLogoClick}
+          />
         </Link>
         {/* Main menu */}
         <div className="sm:flex hidden space-x-10">
           {rutas.map((ruta) => (
             <Link href={ruta.ruta} key={ruta.label}>
-              <h1 className=" uppercase border-b-4 border-b-transparent hover:border-[#F5DA68] text-xl font-bold hover:text-[#F5DA68]">
+              <h1
+                className={
+                  ruta === rutaSeleccionada
+                    ? "uppercase border-b-4 border-b-[#F5DA68] text-xl font-bold text-[#F5DA68]"
+                    : "uppercase border-b-4 border-b-transparent hover:border-[#F5DA68] text-xl font-bold hover:text-[#F5DA68]"
+                }
+                onClick={() => handleRutaClick(ruta)}
+              >
                 {ruta.label}
               </h1>
             </Link>
@@ -99,7 +119,6 @@ export default function NavbarComponent() {
                 </h1>
               </Link>
             ))}
-            {/* <Image src={Banner} width={200} alt="logo" priority className="justify-center" /> */}
           </div>
         </div>
       </div>

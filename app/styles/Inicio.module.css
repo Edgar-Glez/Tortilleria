@@ -2,7 +2,8 @@
   display: flex;
   flex-direction: column;
   flex: 1;
-  background-color: #F6EFD5;}
+  background-color: #f6efd5;
+}
 
 .imageContainer {
   position: relative;
@@ -50,7 +51,7 @@
     max-width: 100%;
   }
 }
-@media (max-width: 768px) and (orientation: landscape){
+@media (max-width: 768px) and (orientation: landscape) {
   .logoContainer {
     padding: 0;
     justify-content: center;

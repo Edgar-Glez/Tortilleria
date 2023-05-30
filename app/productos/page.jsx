@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/legacy/image";
 import styles from "../../styles/globals.css";
-import background from "../assets/Background.png";
 
 const productos = [
   {
@@ -136,7 +135,10 @@ const Productos = () => {
           className="display-flex align-center justify-space-between mb-[20px]"
           style={{ display: "flex", justifyContent: "center" }}
         >
-          <div className="bg-[#ffffff] border-r-[5px] border-[1px] border-solid border-[#cccccc] w-[80%] p-[10px] mt-[100px] " style={{ width: "80%" }}>
+          <div
+            className="amazon-search"
+            style={{ width: "80%" }}
+          >
             <input
               className="flex-1 border-none outline-none text-base ml-[10px] bg-transparent"
               type="text"

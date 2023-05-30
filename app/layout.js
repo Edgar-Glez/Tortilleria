@@ -1,5 +1,4 @@
 import "../styles/globals.css";
-// import Navbar from "./components/Navbar";
 import NavbarComponent from "./components/NavbarComponent";
 import Footer from "./footer/footer";
 

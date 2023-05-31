@@ -62,7 +62,7 @@ export default function NavbarComponent() {
   return (
     <nav className="fixed w-full h-28 shadow-md bg-[#3C9B35] z-50">
       <div className="flex justify-between items-center h-full w-full px-10 2xl:px-16 text-white ">
-        <Link href={"/"} className="pr-10">
+        <Link href={"/"} className="">
           <Image
             // className="pr-10"
             src={Logo}
@@ -74,7 +74,7 @@ export default function NavbarComponent() {
           />
         </Link>
         {/* Main menu */}
-        <div className="sm:flex hidden space-x-10">
+        <div className="lg:flex hidden space-x-10">
           {rutas.map((ruta) => (
             <Link href={ruta.ruta} key={ruta.label}>
               <h1
@@ -92,7 +92,7 @@ export default function NavbarComponent() {
         </div>
 
         {/* Menu control */}
-        <div onClick={handleMenu} className="md:hidden cursor-pointer">
+        <div onClick={handleMenu} className=" lg:hidden cursor-pointer">
           <AiOutlineMenu size={40} color="white" />
         </div>
         <div

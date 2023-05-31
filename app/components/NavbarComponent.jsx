@@ -113,7 +113,7 @@ export default function NavbarComponent() {
               <Link href={ruta.ruta} key={ruta.label}>
                 <h1
                   onClick={handleMenu}
-                  className="mt-5 uppercase hover:border-b hover:border-[#F5DA68] text-xl hover:text-[#F5DA68]"
+                  className="mt-[1.5rem] uppercase hover:border-b hover:border-[#F5DA68] text-xl hover:text-[#F5DA68]"
                 >
                   {ruta.label}
                 </h1>

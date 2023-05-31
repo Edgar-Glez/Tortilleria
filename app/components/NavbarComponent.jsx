@@ -64,7 +64,6 @@ export default function NavbarComponent() {
       <div className="flex justify-between items-center h-full w-full px-10 2xl:px-16 text-white ">
         <Link href={"/"} className="pr-10">
           <Image
-            // className="pr-10"
             src={Logo}
             width={80}
             height={80}

@@ -31,7 +31,7 @@
   z-index: 0;
   position: absolute;
   right: 60%;
-  top: 20%;
+  top: 25%;
 }
 
 .logo {
@@ -51,15 +51,18 @@
     max-width: 100%;
   }
 }
-@media (max-width: 768px) and (orientation: landscape) {
+@media (max-width: 915px) and (orientation: landscape) {
   .logoContainer {
-    padding: 0;
+    display: flex;
     justify-content: center;
-    right: 0%;
-    top: 20%;
+    align-items: center;
+    z-index: 0;
+    position: absolute;
+    right: 60%;
+    top: 29%;
   }
 
   .logo {
-    max-width: 65%;
+    max-width: 100%;
   }
 }

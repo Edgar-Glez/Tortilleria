@@ -62,11 +62,12 @@ export default function NavbarComponent() {
   return (
     <nav className="fixed w-full h-28 shadow-md bg-[#3C9B35] z-50">
       <div className="flex justify-between items-center h-full w-full px-10 2xl:px-16 text-white ">
-        <Link href={"/"}>
+        <Link href={"/"} className="pr-10">
           <Image
+            // className="pr-10"
             src={Logo}
-            width={75}
-            height={75}
+            width={80}
+            height={80}
             alt="logo"
             priority
             onClick={handleLogoClick}
@@ -79,7 +80,7 @@ export default function NavbarComponent() {
               <h1
                 className={
                   ruta === rutaSeleccionada
-                    ? "uppercase border-b-4 border-b-[#F5DA68] text-xl font-bold text-[#F5DA68]"
+                    ? "uppercase border-b-4 border-b-[#F5DA68] text-xl  font-bold text-[#F5DA68]"
                     : "uppercase border-b-4 border-b-transparent hover:border-[#F5DA68] text-xl font-bold hover:text-[#F5DA68]"
                 }
                 onClick={() => handleRutaClick(ruta)}

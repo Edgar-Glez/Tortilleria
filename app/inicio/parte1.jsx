@@ -16,6 +16,7 @@ const Inicio = () => {
       </div>
       <div className={styles.logoContainer}>
         <Image
+        
           loading="eager"
           placeholder="blur"
           className={styles.logo}

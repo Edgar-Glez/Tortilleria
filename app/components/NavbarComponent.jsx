@@ -97,7 +97,7 @@ export default function NavbarComponent() {
         <div
           className={
             menuOpen
-              ? "fixed z-50 right-0 top-0 w-[70%] md:hidden h-screen bg-[#3C9B35] bg-opacity-95 text-white p-10 ease-out duration-500"
+              ? "fixed z-50 right-0 top-0 w-[70%] lg:hidden h-screen bg-[#3C9B35] bg-opacity-95 text-white p-10 ease-out duration-500"
               : "fixed right-[-100%] top-0 p-10 ease-in-out duration-500"
           }
         >
